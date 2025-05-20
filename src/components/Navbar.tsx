@@ -32,7 +32,7 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <a href="#" className="text-2xl md:text-3xl font-bold font-playfair">
-          <span className="gold-gradient">BLACK NIGGA</span>
+          <span className="gold-gradient">13 de Maio de 1988</span>
         </a>
         
         <nav className="hidden md:block">

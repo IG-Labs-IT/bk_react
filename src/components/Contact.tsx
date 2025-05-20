@@ -40,7 +40,7 @@ const Contact = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Entre em Contato</h2>
           <div className="h-1 w-24 bg-gold mx-auto"></div>
           <p className="mt-6 text-foreground/80 max-w-2xl mx-auto">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor tortor in nisi dignissim, at efficitur arcu bibendum.
+            Esse é só o começo
           </p>
         </div>
         
@@ -54,8 +54,8 @@ const Contact = () => {
               </div>
               <div>
                 <h4 className="text-lg font-medium mb-1">E-mail</h4>
-                <p className="text-foreground/70">contato@blacknigga.com</p>
-                <a href="mailto:contato@blacknigga.com" className="text-gold hover:text-gold-light transition-colors block mt-1">
+                <p className="text-foreground/70">comercial@vox88.com</p>
+                <a href="mailto:comercial@vox88.com" className="text-gold hover:text-gold-light transition-colors block mt-1">
                   Enviar um e-mail
                 </a>
               </div>
@@ -141,8 +141,8 @@ const Contact = () => {
               
               <div className="text-center text-sm text-foreground/60 mt-4">
                 Ou envie diretamente para{" "}
-                <a href="mailto:contato@blacknigga.com" className="text-gold hover:text-gold-light transition-colors">
-                  contato@blacknigga.com
+                <a href="mailto:comercial@vox88.com" className="text-gold hover:text-gold-light transition-colors">
+                  comercial@vox88.com
                 </a>
               </div>
             </form>

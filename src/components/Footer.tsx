@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row md:justify-between items-center gap-8">
           <div className="text-center md:text-left">
             <a href="#" className="text-2xl font-bold font-playfair">
-              <span className="gold-gradient">BLACK NIGGA</span>
+              <span className="gold-gradient">Vox88</span>
             </a>
             <p className="text-foreground/60 mt-2 max-w-md">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor tortor in nisi dignissim, at efficitur arcu bibendum.
@@ -34,7 +34,7 @@ const Footer = () => {
         
         <div className="border-t border-gold/10 mt-8 pt-8 flex flex-col md:flex-row md:justify-between items-center text-sm text-foreground/60">
           <div>
-            &copy; {currentYear} Black Nigga. Todos os direitos reservados.
+            &copy; {currentYear} Vox88. Todos os direitos reservados.
           </div>
           
           <div className="flex gap-6 mt-4 md:mt-0">

@@ -11,7 +11,7 @@ const About = () => {
         <div className="flex flex-col md:flex-row gap-12 items-center">
           <div className="md:w-1/2 space-y-6 order-2 md:order-1">
             <h3 className="text-2xl font-semibold">
-              Uma <span className="text-gold">produtora audiovisual</span> dedicada à excelência
+              A <span className="text-gold">Vox88</span> é uma empresa de comunicação
             </h3>
             <p className="text-foreground/80">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor tortor in nisi dignissim, at efficitur arcu bibendum. Cras auctor ligula in diam eleifend, vel pharetra quam ullamcorper. 

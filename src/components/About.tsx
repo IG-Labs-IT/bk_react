@@ -1,4 +1,3 @@
-
 const About = () => {
   return (
     <section id="about" className="py-20 px-6 bg-black">
@@ -7,23 +6,23 @@ const About = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Sobre Nós</h2>
           <div className="h-1 w-24 bg-gold mx-auto"></div>
         </div>
-        
+
         <div className="flex flex-col md:flex-row gap-12 items-center">
           <div className="md:w-1/2 space-y-6 order-2 md:order-1">
             <h3 className="text-2xl font-semibold">
               <span className="text-gold">Vox88</span>
             </h3>
             <p className="text-foreground/80">
-            A Vox88 é uma empresa de comunicação. Fundada por sócios pretos e com uma equipe majoritariamente preta, somos uma plataforma de mídia e conteúdo dedicada ao protagonismo negro. Nosso compromisso é entregar informação, arte, publicidade e jornalismo que elevem a representatividade e potência preta.
+              A Vox88 é uma empresa de comunicação. Fundada por sócios pretos e com uma equipe majoritariamente preta, somos uma plataforma de mídia e conteúdo dedicada ao protagonismo negro. Nosso compromisso é entregar informação, arte, publicidade e jornalismo que elevem a representatividade e potência preta.
             </p>
             <p className="text-foreground/80">
-            Nosso propósito é dar voz às narrativas ignoradas pela mídia tradicional, promovendo autoestima, cultura e transformação social por meio da comunicação.
+              Nosso propósito é dar voz às narrativas ignoradas pela mídia tradicional, promovendo autoestima, cultura e transformação social por meio da comunicação.
             </p>
             <p className="text-foreground/80">
-            Oferecemos uma programação com conteúdos originais e curadoria editorial que celebram nossa cultura. Em breve, ampliaremos nossa atuação como agência de publicidade, gestão de talentos, festivais e mais.
+              Oferecemos uma programação com conteúdos originais e curadoria editorial que celebram nossa cultura. Em breve, ampliaremos nossa atuação como agência de publicidade, gestão de talentos, festivais e mais.
             </p>
           </div>
-          
+
           <div className="md:w-1/2 order-1 md:order-2">
             <div className="relative">
               <div className="absolute -top-4 -left-4 w-full h-full border-2 border-gold rounded-md"></div>
@@ -35,17 +34,18 @@ const About = () => {
             </div>
           </div>
         </div>
-        
+
+        {/* Primeira trilha de cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-20">
           {[
             {
-              title: "Titulo",
+              title: "Onde você estava em 13 de maio de 1888?",
               icon: (
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-10 h-10">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                 </svg>
               ),
-              description: "Onde você estava em 13 de maio de 1888?"
+              description: ""
             },
             {
               title: "",
@@ -65,13 +65,68 @@ const About = () => {
               ),
               description: "13 de maio 1988: a liberdade conquistada, a luta que continua."
             }
-          ].map((item, index) => (
-            <div key={index} className="bg-graphite-dark p-6 rounded-md border border-gold/20 hover:border-gold/40 transition-all">
-              <div className="text-gold mb-4">
-                {item.icon}
+          ].map((item, index) => {
+            const titleContent = item.title || item.description;
+            return (
+              <div key={index} className="bg-graphite-dark p-6 rounded-md border border-gold/20 hover:border-gold/40 transition-all">
+                <div className="text-gold mb-4">
+                  {item.icon}
+                </div>
+                <h3 className="text-xl font-serif mb-3">{titleContent}</h3>
+                {item.title && item.description && (
+                  <p className="text-foreground/70">{item.description}</p>
+                )}
               </div>
-              <h3 className="text-xl font-semibold mb-3">{item.title}</h3>
-              <p className="text-foreground/70">{item.description}</p>
+            );
+          })}
+        </div>
+
+        {/* Segunda trilha de cards com imagem */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-20">
+          {[
+            {
+              // title: "Titulo",
+              image: "https://ichef.bbci.co.uk/ace/ws/640/cpsprodpb/194C/production/_127767460_adf773e0-112c-49b1-a782-42e462cc258d.jpg.webp",
+              description: "Onde você estava em 13 de maio de 1888?",
+              extraDescription: "Conteúdo extra que aparece ao passar o mouse. Conteúdo extra que aparece ao passar o mouse. Conteúdo extra que aparece ao passar o mouse."
+            },
+            {
+              title: "Identidade",
+              image: "https://ichef.bbci.co.uk/ace/ws/640/cpsprodpb/194C/production/_127767460_adf773e0-112c-49b1-a782-42e462cc258d.jpg.webp",
+              description: '"Que preto seja sinônimo de glória" – Beyoncé Knowles-Carter',
+              extraDescription: "Celebrando vozes negras por meio da arte e comunicação."
+            },
+            {
+              title: "Resistência",
+              image: "https://ichef.bbci.co.uk/ace/ws/640/cpsprodpb/194C/production/_127767460_adf773e0-112c-49b1-a782-42e462cc258d.jpg.webp",
+              description: "13 de maio de 1988: a liberdade conquistada, a luta que continua.",
+              extraDescription: "A luta continua com propósito, voz e representatividade."
+            }
+          ].map((item, index) => (
+            <div
+              key={index}
+              className="relative overflow-hidden rounded-md border border-gold/20 bg-graphite-dark transform transition-transform duration-300 hover:scale-105"
+            >
+              <div className="absolute inset-0">
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="w-full h-full object-cover transition-opacity duration-500 hover:opacity-90"
+                />
+                <div className="absolute inset-0 bg-black/0 hover:bg-black/40 transition-colors duration-500"></div>
+              </div>
+
+              <div className="relative z-10 pt-44 px-6 pb-6">
+                <div className="bg-black/70 rounded-lg p-4 backdrop-blur-sm">
+                  <div className="transition-transform duration-500 hover:-translate-y-2">
+                    <h3 className="text-xl font-semibold text-gold mb-2">{item.title}</h3>
+                    <p className="text-foreground/70">{item.description}</p>
+                  </div>
+                  <div className="max-h-0 overflow-hidden transition-[max-height] duration-500 hover:max-h-40 mt-2">
+                    <p className="text-sm text-foreground/60">{item.extraDescription}</p>
+                  </div>
+                </div>
+              </div>
             </div>
           ))}
         </div>
